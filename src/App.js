@@ -56,7 +56,7 @@ const App = () => {
           : "url(/assets/new-design/crops/main.jpg",
       }}
     >
-      <h1>5 day Weather Forecast</h1>
+      <h1>Weather Forecast</h1>
       <div className="button" id="button">
         <button onClick={getLoc}>
           <FontAwesomeIcon icon={faCompass} />

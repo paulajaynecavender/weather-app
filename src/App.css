@@ -28,19 +28,23 @@ html {
 }
 
 h1 {
-  font-size: 2.6rem;
+  font-size: 4rem;
   text-align: center;
   margin: 0;
   padding-top: 20px;
   padding-bottom: 20px;
   font-weight: 100;
   color: white;
-  text-shadow: 0px 0px 5px black;
+  text-shadow: 0px 0px 7px black;
 }
 
 h2 {
-  font-size: 1.5rem;
-  margin: 10px 0 0 0;
+  font-size: 2.8rem;
+  margin: 10px 0 10px 0;
+  font-weight: 100;
+  color: white;
+  text-shadow: 0px 0px 7px black;
+  text-align: center;
 }
 
 p {
@@ -91,7 +95,7 @@ div.input {
   justify-content: center;
   height: 30px;
   box-sizing: border-box;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 div.input input {
   box-shadow: 5px 5px 15px;
@@ -112,7 +116,6 @@ div.input input {
 
 .weatherContainer {
   display: flex;
-  text-align: center;
   flex-wrap: wrap;
   flex-direction: column;
 }
@@ -123,55 +126,62 @@ div.input input {
   margin-bottom: 20px;
 }
 
-.currentWeatherContainer {
-  /* background-color: hsla(189deg, 30%, 92%, 0.5);
-  display: flex;
-  justify-content: space-evenly;
-  box-shadow: 5px 5px 10px;
-  border-radius: 20px;
-  box-sizing: border-box;
-  flex-wrap: wrap;
-  width: 300px; */
-}
-/* .currentWeatherContainer:hover {
-  background-color: hsl(189deg, 30%, 92%);
-  transform: scale(1.01, 1.01);
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
-} */
 .headline {
   display: flex;
-  height: 180px;
+  /* height: 240px; */
+  width: 350px;
   background-color: aliceblue;
   border-radius: 50px;
   box-sizing: border-box;
   flex-direction: column;
   position: relative;
 }
+.headline > div {
+  margin: 10px;
+}
 .box {
   display: flex;
-  padding-left: 30px;
-  padding-right: 10px;
+  height: 130px;
+  justify-content: center;
 }
 .temp {
   display: flex;
-  z-index: 9;
   align-content: center;
 }
 .temp p {
-  font-size: 10rem;
-  font-weight: 500;
+  font-size: 9rem;
+  font-weight: 300;
+  color: white;
+  text-shadow: 0px 0px 7px black;
 }
 
 .mainImage img {
-  width: 150px;
+  width: 140px;
 }
+
+.detail {
+  display: flex;
+  justify-content: space-evenly;
+}
+.humidity,
+.wind,
+.rain {
+  display: flex;
+}
+.bold-text {
+  font-weight: 700;
+}
+.detail img {
+  height: 30px;
+  width: 40px;
+}
+
 .sun {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  position: relative;
-  top: -30px;
+  /* position: relative;
+  top: -40px; */
 }
 .sun div {
   display: flex;
@@ -181,29 +191,14 @@ div.input input {
 .sun img {
   width: 50px;
 }
+.description {
+  display: flex;
+  justify-content: center;
+}
 
 /* .contentWeather img {
   width: 100px;
 } */
-
-.weatherNow {
-  display: flex;
-  justify-content: space-around;
-  flex-direction: row;
-}
-
-.weatherDetail {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.weatherDetail div {
-  align-content: flex-start;
-  display: flex;
-}
-.weatherDetail div p {
-  line-height: 1.8rem;
-}
 
 .forecastContainer {
   display: flex;
@@ -236,13 +231,6 @@ div.input input {
   width: 40px;
 }
 
-.fcContent {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
 .error {
   display: flex;
   justify-content: center;
@@ -251,67 +239,6 @@ div.input input {
 }
 
 @media screen and (min-width: 768px) {
-  img {
-    width: 100px;
-  }
-  .contentWeather img {
-    width: 180px;
-  }
-  h2 {
-    font-size: 2rem;
-  }
-  .cContent {
-    display: flex;
-    justify-content: center;
-  }
-  .currentWeatherContainer {
-    width: 600px;
-    justify-content: space-evenly;
-    flex-direction: column;
-  }
-  .highlight {
-    flex-direction: row;
-    align-items: center;
-  }
-  .weatherDetail {
-    justify-content: center;
-  }
-  .weatherDetail div p {
-    line-height: 3rem;
-  }
-  p {
-    font-size: 1.6rem;
-  }
-  .sun {
-    flex-direction: column;
-    padding: 0 20px;
-    justify-content: center;
-  }
-  .forecastWeatherContainer {
-    flex-direction: column;
-    width: 155px;
-  }
-  .forecastWeatherContainer img {
-    width: 100px;
-  }
-  .forecastWeatherContainer .fcTime p {
-    width: auto;
-  }
-  .forecastWeatherContainer p {
-    font-size: 1.4rem;
-  }
-  .fcContent {
-    flex-direction: column;
-  }
-  .forecastContainer {
-    width: 100%;
-  }
-  .forecastContainerCentre {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    max-width: 900px;
-  }
 }
 .error {
   margin: 0;
