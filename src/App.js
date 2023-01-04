@@ -46,14 +46,20 @@ const App = () => {
   };
 
   return (
-    <>
+    <div
+      className="backgroundImg"
+      style={{
+        backgroundImage: weather
+          ? `url(/assets/new-design/crops/${weather.list[0].weather[0].icon}.jpg)`
+          : "url(/assets/new-design/crops/main.jpg",
+      }}
+    >
       <h1>5 day Weather Forecast</h1>
       <div className="button" id="button">
         <button onClick={getLoc}>get my location</button>
       </div>
       <UserInput />
       {!location && <p>Awaiting location...</p>}
-
       {/* <div className="error" id="error"></div> */}
       {!weather && ""}
       {weather && (
@@ -66,7 +72,7 @@ const App = () => {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 };
 
