@@ -10,6 +10,8 @@ import {
   selectLocation,
 } from "./features/weatherSlice";
 import { useDispatch, useSelector } from "react-redux";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCompass } from "@fortawesome/free-solid-svg-icons";
 
 const App = () => {
   // const [weather, setWeather] = useState();
@@ -56,7 +58,9 @@ const App = () => {
     >
       <h1>5 day Weather Forecast</h1>
       <div className="button" id="button">
-        <button onClick={getLoc}>get my location</button>
+        <button onClick={getLoc}>
+          <FontAwesomeIcon icon={faCompass} />
+        </button>
       </div>
       <UserInput />
       {!location && <p>Awaiting location...</p>}
@@ -67,7 +71,7 @@ const App = () => {
           <Weather />
           <div className="forecastContainer">
             <div className="forecastContainerCentre">
-              <ForecastWeather weather={weather.list} />
+              {/* <ForecastWeather weather={weather.list} /> */}
             </div>
           </div>
         </div>

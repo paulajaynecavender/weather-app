@@ -34,6 +34,8 @@ h1 {
   padding-top: 20px;
   padding-bottom: 20px;
   font-weight: 100;
+  color: white;
+  text-shadow: 0px 0px 5px black;
 }
 
 h2 {
@@ -122,38 +124,72 @@ div.input input {
 }
 
 .currentWeatherContainer {
-  background-color: hsla(189deg, 30%, 92%, 0.5);
+  /* background-color: hsla(189deg, 30%, 92%, 0.5);
   display: flex;
   justify-content: space-evenly;
   box-shadow: 5px 5px 10px;
   border-radius: 20px;
   box-sizing: border-box;
   flex-wrap: wrap;
-  width: 300px;
+  width: 300px; */
 }
-.currentWeatherContainer:hover {
+/* .currentWeatherContainer:hover {
   background-color: hsl(189deg, 30%, 92%);
   transform: scale(1.01, 1.01);
   transition: all 0.3s ease-in-out;
   box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+} */
+.headline {
+  display: flex;
+  height: 180px;
+  background-color: aliceblue;
+  border-radius: 50px;
+  box-sizing: border-box;
+  flex-direction: column;
+  position: relative;
+}
+.box {
+  display: flex;
+  padding-left: 30px;
+  padding-right: 10px;
+}
+.temp {
+  display: flex;
+  z-index: 9;
+  align-content: center;
+}
+.temp p {
+  font-size: 10rem;
+  font-weight: 500;
 }
 
-.contentWeather img {
-  width: 100px;
+.mainImage img {
+  width: 150px;
 }
+.sun {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  top: -30px;
+}
+.sun div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.sun img {
+  width: 50px;
+}
+
+/* .contentWeather img {
+  width: 100px;
+} */
 
 .weatherNow {
   display: flex;
   justify-content: space-around;
   flex-direction: row;
-}
-
-.highlight {
-  display: flex;
-  flex-direction: column;
-}
-.highlight p {
-  font-size: 1.8rem;
 }
 
 .weatherDetail {
@@ -167,20 +203,6 @@ div.input input {
 }
 .weatherDetail div p {
   line-height: 1.8rem;
-}
-
-.sun {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-.sun div {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.sun img {
-  width: 50px;
 }
 
 .forecastContainer {
