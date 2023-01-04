@@ -1,0 +1,285 @@
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Didact Gothic";
+  background: rgb(224, 245, 246);
+  background: linear-gradient(
+    159deg,
+    rgb(224, 245, 246) 35%,
+    rgb(3, 83, 171) 100%
+  );
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}
+
+h1 {
+  font-size: 2.6rem;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin: 10px 0 0 0;
+}
+
+p {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+img {
+  width: 60px;
+}
+
+div.button {
+  display: flex;
+  justify-content: center;
+  height: 30px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+button {
+  font-size: 1.6rem;
+  font-family: inherit;
+  border-radius: 20px;
+  box-sizing: border-box;
+  border: 0;
+  padding: 0px 20px;
+  color: #000;
+  background-color: hsla(189deg, 30%, 92%, 0.5);
+  box-shadow: 5px 5px 15px;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+}
+
+button:hover {
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+  color: black;
+  transform: translateY(-2px);
+  transition: all 0.3s ease-in-out;
+  background-color: hsl(0deg, 0%, 100%);
+}
+
+button:active {
+  transform: translateY(-1px);
+}
+
+div.input {
+  display: flex;
+  justify-content: center;
+  height: 30px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+div.input input {
+  box-shadow: 5px 5px 15px;
+  padding: 5px 20px;
+  font-size: 1.6rem;
+  font-family: inherit;
+  border-radius: 20px;
+  box-sizing: border-box;
+  border: 0;
+  background-color: hsla(189deg, 30%, 92%, 0.5);
+}
+
+#getLocInput:focus,
+#getLocInput:hover {
+  outline: none;
+  background-color: hsl(0deg, 0%, 100%);
+}
+
+.weatherContainer {
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.currentContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.currentWeatherContainer {
+  background-color: hsla(189deg, 30%, 92%, 0.5);
+  display: flex;
+  justify-content: space-evenly;
+  box-shadow: 5px 5px 10px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  width: 300px;
+}
+.currentWeatherContainer:hover {
+  background-color: hsl(189deg, 30%, 92%);
+  transform: scale(1.01, 1.01);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+}
+
+.contentWeather img {
+  width: 100px;
+}
+
+.weatherNow {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+.highlight {
+  display: flex;
+  flex-direction: column;
+}
+.highlight p {
+  font-size: 1.8rem;
+}
+
+.weatherDetail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.weatherDetail div {
+  align-content: flex-start;
+  display: flex;
+}
+.weatherDetail div p {
+  line-height: 1.8rem;
+}
+
+.sun {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.sun div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.sun img {
+  width: 50px;
+}
+
+.forecastContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.forecastWeatherContainer {
+  background-color: hsla(189deg, 30%, 92%, 0.5);
+  display: flex;
+  justify-content: space-evenly;
+  box-shadow: 5px 5px 10px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  justify-content: flex-start;
+  margin: 0 8px 10px 0px;
+  width: 250px;
+  align-items: center;
+  padding: 10px;
+}
+.forecastWeatherContainer:hover {
+  background-color: hsl(189deg, 30%, 92%);
+  transform: scale(1.01, 1.01);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+}
+
+.fcTime p {
+  width: 40px;
+}
+
+.fcContent {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.error {
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  img {
+    width: 100px;
+  }
+  .contentWeather img {
+    width: 180px;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  .cContent {
+    display: flex;
+    justify-content: center;
+  }
+  .currentWeatherContainer {
+    width: 600px;
+    justify-content: space-evenly;
+    flex-direction: column;
+  }
+  .highlight {
+    flex-direction: row;
+    align-items: center;
+  }
+  .weatherDetail {
+    justify-content: center;
+  }
+  .weatherDetail div p {
+    line-height: 3rem;
+  }
+  p {
+    font-size: 1.6rem;
+  }
+  .sun {
+    flex-direction: column;
+    padding: 0 20px;
+    justify-content: center;
+  }
+  .forecastWeatherContainer {
+    flex-direction: column;
+    width: 155px;
+  }
+  .forecastWeatherContainer img {
+    width: 100px;
+  }
+  .forecastWeatherContainer .fcTime p {
+    width: auto;
+  }
+  .forecastWeatherContainer p {
+    font-size: 1.4rem;
+  }
+  .fcContent {
+    flex-direction: column;
+  }
+  .forecastContainer {
+    width: 100%;
+  }
+  .forecastContainerCentre {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 900px;
+  }
+}
+.error {
+  margin: 0;
+}
