@@ -12,7 +12,7 @@ const ForecastWeather = ({ weather }) => {
           <div key={weather.dt} className="forecastWeatherContainer">
             <div className="fcTime">
               <p>
-                {time.getHours()}:{time.getMinutes()}0
+                {day} {time.getHours()}:{time.getMinutes()}0
               </p>
             </div>
             <div className="fcDescription">

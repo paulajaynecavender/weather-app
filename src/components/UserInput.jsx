@@ -13,7 +13,8 @@ const UserInput = () => {
   };
   const [searchTerm, setSearchTerm] = useState();
 
-  const onClick = () => {
+  const onClick = (e) => {
+    e.preventDefault();
     getLonLat(searchTerm);
   };
 
@@ -25,7 +26,7 @@ const UserInput = () => {
   };
 
   return (
-    <div className="input">
+    <div className="inputBox">
       <input
         onInput={onInput}
         type="text"

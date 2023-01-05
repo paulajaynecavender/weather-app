@@ -57,12 +57,15 @@ const App = () => {
       }}
     >
       <h1>Weather Forecast</h1>
-      <div className="button" id="button">
+      <div className="buttonLocate" id="button">
         <button onClick={getLoc}>
           <FontAwesomeIcon icon={faCompass} />
+          <p>Locate Me</p>
         </button>
       </div>
-      <UserInput />
+      <div className="inputContainer">
+        <UserInput />
+      </div>
       {!location && <p>Awaiting location...</p>}
       {/* <div className="error" id="error"></div> */}
       {!weather && ""}

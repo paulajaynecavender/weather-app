@@ -47,7 +47,7 @@ const Weather = () => {
           <div className="detail box">
             <div className="detailContent">
               <div className="rain">
-                <div clasName="rain1">
+                <div className="rain1">
                   <img src={`./assets/umbrella.svg`} alt="weather" />
                 </div>
                 <div className="rain2">

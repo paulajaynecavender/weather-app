@@ -5,20 +5,6 @@ html {
   padding: 0;
 }
 
-/* body {
-  font-family: "Didact Gothic";
-  background: rgb(224, 245, 246);
-  background: linear-gradient(
-    159deg,
-    rgb(224, 245, 246) 35%,
-    rgb(3, 83, 171) 100%
-  );
-  background-size: cover;
-  background-attachment: fixed;
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-} */
 .backgroundImg {
   width: 100%;
   height: 100vh;
@@ -59,30 +45,30 @@ p {
   margin: 0;
 }
 
-img {
-  width: 60px;
-}
-
-div.button {
+.buttonLocate {
   display: flex;
   justify-content: center;
   height: 30px;
   box-sizing: border-box;
   margin-bottom: 20px;
+  align-items: center;
 }
 
-button {
+.buttonLocate button {
   font-size: 1.6rem;
   font-family: inherit;
   border-radius: 20px;
   box-sizing: border-box;
   border: 0;
-  padding: 0px 20px;
+  padding: 5px 10px;
   color: #000;
-  background-color: hsla(189deg, 30%, 92%, 0.5);
-  box-shadow: 5px 5px 15px;
-  transition: all 0.3s ease 0s;
+  background-color: white;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+.buttonLocate button svg {
+  padding-right: 5px;
 }
 
 button:hover {
@@ -96,29 +82,44 @@ button:hover {
 button:active {
   transform: translateY(-1px);
 }
-
-div.input {
+.inputContainer {
   display: flex;
   justify-content: center;
-  height: 30px;
-  box-sizing: border-box;
-  margin-bottom: 10px;
 }
-div.input input {
-  box-shadow: 5px 5px 15px;
-  padding: 5px 20px;
-  font-size: 1.6rem;
-  font-family: inherit;
+.inputBox {
+  width: 200px;
+  position: relative;
+}
+.inputBox input {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  outline: none;
+  height: 30px;
   border-radius: 20px;
-  box-sizing: border-box;
   border: 0;
-  background-color: hsla(189deg, 30%, 92%, 0.5);
+  padding-left: 10px;
+  background-color: white;
+}
+.inputBox button {
+  position: absolute;
+  top: 0;
+  border-radius: 20px;
+  right: 0px;
+  z-index: 2;
+  border: 0;
+  height: 30px;
+  cursor: pointer;
+  color: black;
+  background-color: white;
+  transform: translateX(2px);
+  padding: 8px;
 }
 
 #getLocInput:focus,
 #getLocInput:hover {
   outline: none;
-  background-color: hsl(0deg, 0%, 100%);
+  background-color: white;
 }
 
 .weatherContainer {
@@ -145,26 +146,13 @@ div.input input {
   justify-content: center;
   flex-direction: row;
   align-items: center;
-  /* position: relative; */
 }
 
-.temp {
-  /* padding-right: 25px; */
-  /* position: absolute;
-  top: -10px;
-  left: 50px;
-  z-index: 5; */
-}
 .temp p {
   font-size: 9rem;
   font-weight: 300;
   color: white;
   text-shadow: 0px 0px 7px black;
-}
-.mainImage {
-  /* position: absolute;
-  top: 8px;
-  left: 80px; */
 }
 
 .mainImage img {
@@ -224,10 +212,6 @@ div.input input {
   justify-content: center;
 }
 
-/* .contentWeather img {
-  width: 100px;
-} */
-
 .forecastContainer {
   display: flex;
   justify-content: center;
@@ -246,12 +230,6 @@ div.input input {
   padding: 10px;
   flex-direction: column;
 }
-/* .forecastWeatherContainer:hover {
-  background-color: hsl(189deg, 30%, 92%);
-  transform: scale(1.01, 1.01);
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
-} */
 
 .forecastContainerCentre p {
   width: 40px;
@@ -261,7 +239,7 @@ div.input input {
   width: 40px;
 }
 .forecastContainerCentre {
-  width: 380px;
+  width: 345px;
   display: flex;
   overflow: auto;
 }
@@ -285,8 +263,17 @@ div.input input {
   margin-bottom: 20px;
 }
 
-@media screen and (min-width: 768px) {
-}
-.error {
-  margin: 0;
+@media screen and (min-width: 600px) {
+  .detailContent {
+    flex-wrap: nowrap;
+  }
+  .box {
+    width: 500px;
+  }
+  .currentWeatherContainer {
+    align-items: center;
+  }
+  .forecastContainerCentre {
+    width: 590px;
+  }
 }
