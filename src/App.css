@@ -46,7 +46,14 @@ h2 {
   text-shadow: 0px 0px 7px black;
   text-align: center;
 }
-
+h3 {
+  font-size: 2rem;
+  margin: 10px 0 10px 0;
+  font-weight: 100;
+  color: white;
+  text-shadow: 0px 0px 7px black;
+  text-align: center;
+}
 p {
   font-size: 1.3rem;
   margin: 0;
@@ -125,28 +132,28 @@ div.input input {
   justify-content: center;
   margin-bottom: 20px;
 }
-
-.headline {
+.currentWeatherContainer {
+  width: 300px;
   display: flex;
-  /* height: 240px; */
-  width: 350px;
-  background-color: aliceblue;
-  border-radius: 50px;
-  box-sizing: border-box;
   flex-direction: column;
-  position: relative;
+  justify-content: center;
 }
-.headline > div {
-  margin: 10px;
-}
-.box {
+
+.highlight {
   display: flex;
   height: 130px;
   justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  /* position: relative; */
 }
+
 .temp {
-  display: flex;
-  align-content: center;
+  /* padding-right: 25px; */
+  /* position: absolute;
+  top: -10px;
+  left: 50px;
+  z-index: 5; */
 }
 .temp p {
   font-size: 9rem;
@@ -154,19 +161,41 @@ div.input input {
   color: white;
   text-shadow: 0px 0px 7px black;
 }
-
-.mainImage img {
-  width: 140px;
+.mainImage {
+  /* position: absolute;
+  top: 8px;
+  left: 80px; */
 }
 
+.mainImage img {
+  width: 130px;
+}
 .detail {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  height: 120px;
+  box-sizing: border-box;
+  justify-content: center;
+}
+.box {
+  background-color: white;
+  border-radius: 30px;
+  width: 300px;
+}
+
+.detailContent {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
 }
 .humidity,
 .wind,
-.rain {
+.rain,
+.cloud {
   display: flex;
+  width: 113px;
+  padding: 10px;
 }
 .bold-text {
   font-weight: 700;
@@ -179,9 +208,8 @@ div.input input {
 .sun {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  /* position: relative;
-  top: -40px; */
+  justify-content: space-evenly;
+  margin-bottom: 10px;
 }
 .sun div {
   display: flex;
@@ -203,32 +231,51 @@ div.input input {
 .forecastContainer {
   display: flex;
   justify-content: center;
-  flex-direction: column;
-  align-items: center;
 }
 
 .forecastWeatherContainer {
-  background-color: hsla(189deg, 30%, 92%, 0.5);
+  background-color: white;
   display: flex;
   justify-content: space-evenly;
-  box-shadow: 5px 5px 10px;
   border-radius: 20px;
   box-sizing: border-box;
   justify-content: flex-start;
   margin: 0 8px 10px 0px;
-  width: 250px;
+  width: 50px;
   align-items: center;
   padding: 10px;
+  flex-direction: column;
 }
-.forecastWeatherContainer:hover {
+/* .forecastWeatherContainer:hover {
   background-color: hsl(189deg, 30%, 92%);
   transform: scale(1.01, 1.01);
   transition: all 0.3s ease-in-out;
   box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+} */
+
+.forecastContainerCentre p {
+  width: 40px;
+  text-align: center;
+}
+.fcDescription img {
+  width: 40px;
+}
+.forecastContainerCentre {
+  width: 380px;
+  display: flex;
+  overflow: auto;
+}
+::-webkit-scrollbar {
+  height: 15px;
+}
+::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 100vw;
 }
 
-.fcTime p {
-  width: 40px;
+::-webkit-scrollbar-thumb {
+  background-color: #efcc00;
+  border-radius: 100vw;
 }
 
 .error {

@@ -71,7 +71,7 @@ const App = () => {
           <Weather />
           <div className="forecastContainer">
             <div className="forecastContainerCentre">
-              {/* <ForecastWeather weather={weather.list} /> */}
+              <ForecastWeather weather={weather.list} />
             </div>
           </div>
         </div>

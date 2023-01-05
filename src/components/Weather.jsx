@@ -14,8 +14,11 @@ const Weather = () => {
         <div className="currentWeatherContainer">
           <div className="location">
             <h2>{weather.city.name}</h2>
+            <h3>
+              {description.charAt(0).toUpperCase() + description.slice(1)}
+            </h3>
           </div>
-          <div className="box">
+          <div className="highlight">
             <div className="temp">
               <p>{Math.round(weather.list[0].main.temp - 273.15)}°</p>
             </div>
@@ -26,15 +29,23 @@ const Weather = () => {
               />
             </div>
           </div>
-          <div className="headline">
-            <div className="description">
-              <p className="bold-text">
-                {description.charAt(0).toUpperCase() + description.slice(1)}{" "}
-                with {clouds.all}% cloud
+          <div className="sun box">
+            <div className="sunrise">
+              <img src="./assets/sunrise.svg" alt="sunrise" />
+              <p>
+                Sunrise {sunrise.getHours()}:{sunrise.getMinutes()}
               </p>
             </div>
 
-            <div className="detail">
+            <div className="sunset">
+              <img src="./assets/sunset.svg" alt="sunset" />
+              <p>
+                Sunset {sunset.getHours()}:{sunset.getMinutes()}
+              </p>
+            </div>
+          </div>
+          <div className="detail box">
+            <div className="detailContent">
               <div className="rain">
                 <div clasName="rain1">
                   <img src={`./assets/umbrella.svg`} alt="weather" />
@@ -42,6 +53,15 @@ const Weather = () => {
                 <div className="rain2">
                   <p>Rain Prob.</p>
                   <p className="bold-text">{Math.round(pop * 100)}%</p>
+                </div>
+              </div>
+              <div className="cloud">
+                <div className="cloud1">
+                  <img src={`./assets/cloud.svg`} alt="weather" />
+                </div>
+                <div className="cloud2">
+                  <p>Cloud Cover</p>
+                  <p className="bold-text">{clouds.all}%</p>
                 </div>
               </div>
               <div className="wind">
@@ -61,21 +81,6 @@ const Weather = () => {
                   <p>Humidity</p>
                   <p className="bold-text">{humidity}%</p>
                 </div>
-              </div>
-            </div>
-            <div className="sun">
-              <div className="sunrise">
-                <img src="./assets/sunrise.svg" alt="sunrise" />
-                <p>
-                  Sunrise {sunrise.getHours()}:{sunrise.getMinutes()}
-                </p>
-              </div>
-
-              <div className="sunset">
-                <img src="./assets/sunset.svg" alt="sunset" />
-                <p>
-                  Sunset {sunset.getHours()}:{sunset.getMinutes()}
-                </p>
               </div>
             </div>
           </div>

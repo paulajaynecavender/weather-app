@@ -12,7 +12,7 @@ const ForecastWeather = ({ weather }) => {
           <div key={weather.dt} className="forecastWeatherContainer">
             <div className="fcTime">
               <p>
-                {day} {time.getHours()}:{time.getMinutes()}0
+                {time.getHours()}:{time.getMinutes()}0
               </p>
             </div>
             <div className="fcDescription">
@@ -23,16 +23,16 @@ const ForecastWeather = ({ weather }) => {
             </div>
             <div className="fcContent">
               <div className="fcTemp">
-                <p> Temp: {Math.round(main.temp - 273.15)}°C</p>
+                <p> {Math.round(main.temp - 273.15)}°C</p>
               </div>
 
-              <div className="fcRain">
-                <p>{Math.round(pop * 100)}% Chance of Rain</p>
+              {/* <div className="fcRain">
+                <p>{Math.round(pop * 100)}%</p>
               </div>
 
               <div className="fcWind">
-                <p>Wind: {Math.round(wind.speed)} mph</p>
-              </div>
+                <p>{Math.round(wind.speed)} mph</p>
+              </div> */}
             </div>
           </div>
         );
