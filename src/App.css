@@ -74,13 +74,13 @@ p {
 button:hover {
   box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
   color: black;
-  transform: translateY(-2px);
-  transition: all 0.3s ease-in-out;
+  /* transform: translateY(-2px); */
   background-color: hsl(0deg, 0%, 100%);
 }
 
 button:active {
-  transform: translateY(-1px);
+  transform: translateY(30px);
+  transition: all 0.4s ease-in-out;
 }
 .inputContainer {
   display: flex;
@@ -119,7 +119,7 @@ button:active {
 #getLocInput:focus,
 #getLocInput:hover {
   outline: none;
-  background-color: white;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
 }
 
 .weatherContainer {
@@ -161,7 +161,6 @@ button:active {
 .detail {
   display: flex;
   flex-direction: column;
-  height: 120px;
   box-sizing: border-box;
   justify-content: center;
 }
@@ -268,12 +267,27 @@ button:active {
     flex-wrap: nowrap;
   }
   .box {
-    width: 500px;
+    width: 550px;
+  }
+  .box p {
+    font-size: 1.6rem;
   }
   .currentWeatherContainer {
     align-items: center;
   }
   .forecastContainerCentre {
-    width: 590px;
+    width: 580px;
+  }
+  .humidity,
+  .wind,
+  .rain,
+  .cloud {
+    width: auto;
+  }
+  .humidity p,
+  .wind p,
+  .rain p,
+  .cloud p {
+    width: auto;
   }
 }

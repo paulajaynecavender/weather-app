@@ -66,8 +66,8 @@ const App = () => {
       <div className="inputContainer">
         <UserInput />
       </div>
-      {!location && <p>Awaiting location...</p>}
-      {/* <div className="error" id="error"></div> */}
+      {/* {!location && <p>Awaiting location...</p>}
+      <div className="error" id="error"></div> */}
       {!weather && ""}
       {weather && (
         <div className="weatherContainer">
