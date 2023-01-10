@@ -10,9 +10,6 @@ const Sun = () => {
   const minutesR = sunrise.getMinutes();
 
   const sunriseTime = `${padTo2Digits(hoursR)}:${padTo2Digits(minutesR)}`;
-  function padTo2Digits(num) {
-    return num.toString().padStart(2, "0");
-  }
 
   const hoursSet = sunset.getHours();
   const minutesSet = sunset.getMinutes();
