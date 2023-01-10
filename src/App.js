@@ -25,7 +25,7 @@ const App = () => {
       const apiResults = await axios.get(
         `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=1bf79de4275b581f16093166cb75d170`
       );
-      // console.log(apiResults);
+      console.log(apiResults);
 
       dispatch(setWeather(apiResults.data));
     },

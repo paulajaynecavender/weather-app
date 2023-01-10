@@ -4,7 +4,7 @@ import { selectWeather } from "../features/weatherSlice";
 const Weather = () => {
   const weather = useSelector(selectWeather);
   const { clouds, pop, wind } = weather.list[0];
-  const { feels_like, humidity } = weather.list[0].main;
+  const { humidity } = weather.list[0].main;
   let sunrise = new Date(weather.city.sunrise * 1000);
   let sunset = new Date(weather.city.sunset * 1000);
   const description = weather.list[0].weather[0].description;

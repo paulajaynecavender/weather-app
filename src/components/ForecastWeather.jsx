@@ -7,7 +7,7 @@ const ForecastWeather = ({ weather }) => {
         let time = new Date(weather.dt * 1000);
         const d = new Date(weather.dt * 1000);
         let day = weekday[d.getDay()];
-        const { pop, wind, main } = weather;
+        const { main } = weather;
         return (
           <div key={weather.dt} className="forecastWeatherContainer shadow">
             <div className="fcTime">
