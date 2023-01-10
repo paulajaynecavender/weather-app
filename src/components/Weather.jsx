@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
 import { selectWeather } from "../features/weatherSlice";
+import Sun from "./Sun";
 
 const Weather = () => {
   const weather = useSelector(selectWeather);
@@ -32,19 +33,7 @@ const Weather = () => {
             </div>
           </div>
           <div className="sun box shadow">
-            <div className="sunrise">
-              <img src="./assets/sunrise.svg" alt="sunrise" />
-              <p>
-                Sunrise {sunrise.getHours()}:{sunrise.getMinutes()}
-              </p>
-            </div>
-
-            <div className="sunset">
-              <img src="./assets/sunset.svg" alt="sunset" />
-              <p>
-                Sunset {sunset.getHours()}:{sunset.getMinutes()}
-              </p>
-            </div>
+            <Sun />
           </div>
           <div className="detail box shadow">
             <div className="detailContent">
