@@ -21,7 +21,6 @@ h1 {
   padding-bottom: 20px;
   font-weight: 100;
   color: white;
-  text-shadow: 0px 0px 7px black;
 }
 
 h2 {
@@ -29,7 +28,6 @@ h2 {
   margin: 10px 0 10px 0;
   font-weight: 100;
   color: white;
-  text-shadow: 0px 0px 7px black;
   text-align: center;
 }
 h3 {
@@ -37,8 +35,10 @@ h3 {
   margin: 10px 0 10px 0;
   font-weight: 100;
   color: white;
-  text-shadow: 0px 0px 7px black;
   text-align: center;
+}
+.textShadow {
+  text-shadow: 1px 2px 0px black;
 }
 p {
   font-size: 1.3rem;
@@ -72,7 +72,7 @@ p {
 }
 
 button:hover {
-  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 3px 3px 0px black;
   color: black;
   /* transform: translateY(-2px); */
   background-color: hsl(0deg, 0%, 100%);
@@ -119,7 +119,7 @@ button:active {
 #getLocInput:focus,
 #getLocInput:hover {
   outline: none;
-  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 3px 3px 0px black;
 }
 
 .weatherContainer {
@@ -152,7 +152,6 @@ button:active {
   font-size: 9rem;
   font-weight: 300;
   color: white;
-  text-shadow: 0px 0px 7px black;
 }
 
 .mainImage img {
@@ -168,6 +167,9 @@ button:active {
   background-color: white;
   border-radius: 30px;
   width: 300px;
+}
+.shadow {
+  box-shadow: 3px 3px 0px black;
 }
 
 .detailContent {
@@ -276,7 +278,7 @@ button:active {
     align-items: center;
   }
   .forecastContainerCentre {
-    width: 580px;
+    width: 578px;
   }
   .humidity,
   .wind,

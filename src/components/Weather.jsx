@@ -13,14 +13,16 @@ const Weather = () => {
       <div className="currentContainer">
         <div className="currentWeatherContainer">
           <div className="location">
-            <h2>{weather.city.name}</h2>
-            <h3>
+            <h2 className="textShadow">{weather.city.name}</h2>
+            <h3 className="textShadow">
               {description.charAt(0).toUpperCase() + description.slice(1)}
             </h3>
           </div>
           <div className="highlight">
-            <div className="temp">
-              <p>{Math.round(weather.list[0].main.temp - 273.15)}°</p>
+            <div className="temp ">
+              <p className="textShadow">
+                {Math.round(weather.list[0].main.temp - 273.15)}°
+              </p>
             </div>
             <div className="mainImage">
               <img
@@ -29,7 +31,7 @@ const Weather = () => {
               />
             </div>
           </div>
-          <div className="sun box">
+          <div className="sun box shadow">
             <div className="sunrise">
               <img src="./assets/sunrise.svg" alt="sunrise" />
               <p>
@@ -44,7 +46,7 @@ const Weather = () => {
               </p>
             </div>
           </div>
-          <div className="detail box">
+          <div className="detail box shadow">
             <div className="detailContent">
               <div className="rain">
                 <div className="rain1">

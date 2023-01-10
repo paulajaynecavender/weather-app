@@ -9,7 +9,7 @@ const ForecastWeather = ({ weather }) => {
         let day = weekday[d.getDay()];
         const { pop, wind, main } = weather;
         return (
-          <div key={weather.dt} className="forecastWeatherContainer">
+          <div key={weather.dt} className="forecastWeatherContainer shadow">
             <div className="fcTime">
               <p>
                 {day} {time.getHours()}:{time.getMinutes()}0

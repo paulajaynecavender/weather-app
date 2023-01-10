@@ -25,7 +25,7 @@ const App = () => {
       const apiResults = await axios.get(
         `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=1bf79de4275b581f16093166cb75d170`
       );
-      console.log(apiResults);
+      // console.log(apiResults);
 
       dispatch(setWeather(apiResults.data));
     },
@@ -52,11 +52,11 @@ const App = () => {
       className="backgroundImg"
       style={{
         backgroundImage: weather
-          ? `url(/assets/new-design/crops/${weather.list[0].weather[0].icon}.jpg)`
-          : "url(/assets/new-design/crops/main.jpg",
+          ? `url(/assets/new-design/${weather.list[0].weather[0].icon}.jpg)`
+          : "url(/assets/new-design/main.jpg",
       }}
     >
-      <h1>Weather Forecast</h1>
+      <h1 className="textShadow">Weather Forecast</h1>
       <div className="buttonLocate" id="button">
         <button onClick={getLoc}>
           <FontAwesomeIcon icon={faCompass} />
