@@ -27,21 +27,19 @@ h2 {
   font-size: 2.8rem;
   margin: 10px 0 10px 0;
   font-weight: 100;
-  color: white;
   text-align: center;
 }
 h3 {
   font-size: 2rem;
   margin: 10px 0 10px 0;
   font-weight: 100;
-  color: white;
   text-align: center;
 }
 .textShadow {
   text-shadow: 1px 2px 0px black;
 }
 p {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   margin: 0;
 }
 
@@ -50,7 +48,7 @@ p {
   justify-content: center;
   height: 30px;
   box-sizing: border-box;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   align-items: center;
 }
 
@@ -74,7 +72,6 @@ p {
 button:hover {
   box-shadow: 3px 3px 0px black;
   color: black;
-  /* transform: translateY(-2px); */
   background-color: hsl(0deg, 0%, 100%);
 }
 
@@ -85,6 +82,7 @@ button:active {
 .inputContainer {
   display: flex;
   justify-content: center;
+  margin: 15px 0px;
 }
 .inputBox {
   width: 200px;
@@ -131,7 +129,6 @@ button:active {
 .currentContainer {
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
 }
 .currentWeatherContainer {
   width: 300px;
@@ -146,6 +143,7 @@ button:active {
   justify-content: center;
   flex-direction: row;
   align-items: center;
+  margin-bottom: 15px;
 }
 
 .temp p {
@@ -160,13 +158,15 @@ button:active {
 .detail {
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
   justify-content: center;
 }
 .box {
+  box-sizing: border-box;
   background-color: white;
   border-radius: 30px;
   width: 300px;
+  padding: 0 10px;
+  margin-bottom: 15px;
 }
 .shadow {
   box-shadow: 3px 3px 0px black;
@@ -174,17 +174,18 @@ button:active {
 
 .detailContent {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   align-items: center;
+  padding: 5px;
 }
 .humidity,
 .wind,
 .rain,
 .cloud {
   display: flex;
-  width: 113px;
-  padding: 10px;
+  width: 118px;
+  padding: 5px 0px;
 }
 .bold-text {
   font-weight: 700;
@@ -198,7 +199,6 @@ button:active {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  margin-bottom: 10px;
 }
 .sun div {
   display: flex;
@@ -206,7 +206,8 @@ button:active {
   align-items: center;
 }
 .sun img {
-  width: 50px;
+  width: 40px;
+  padding: 5px;
 }
 .description {
   display: flex;
@@ -257,25 +258,27 @@ button:active {
   border-radius: 100vw;
 }
 
-.error {
-  display: flex;
-  justify-content: center;
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
 @media screen and (min-width: 600px) {
   .detailContent {
     flex-wrap: nowrap;
   }
-  .box {
-    width: 550px;
-  }
+  /* .box {
+    width: auto;
+  } */
   .box p {
     font-size: 1.6rem;
   }
   .currentWeatherContainer {
     align-items: center;
+  }
+  .sun {
+    width: 350px;
+  }
+  .sun img {
+    width: 50px;
+  }
+  .detail {
+    width: 570px;
   }
   .forecastContainerCentre {
     width: 578px;
