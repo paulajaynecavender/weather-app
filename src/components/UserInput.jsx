@@ -13,9 +13,10 @@ const UserInput = () => {
   };
   const [searchTerm, setSearchTerm] = useState();
 
-  const onClick = (e) => {
-    e.preventDefault();
+  const onSubmit = (e) => {
     getLonLat(searchTerm);
+    e.preventDefault();
+    e.target.reset();
   };
 
   const getLonLat = async (location) => {
@@ -26,17 +27,17 @@ const UserInput = () => {
   };
 
   return (
-    <div className="inputBox">
+    <form className="inputBox" onSubmit={onSubmit}>
       <input
         onInput={onInput}
         type="text"
         placeholder="... or search by location"
         id="getLocInput"
       />
-      <button onClick={onClick}>
+      <button>
         <FontAwesomeIcon icon={faPaperPlane} />
       </button>
-    </div>
+    </form>
   );
 };
 
