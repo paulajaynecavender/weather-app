@@ -19,7 +19,7 @@ h1 {
   margin: 0;
   padding-top: 20px;
   padding-bottom: 20px;
-  font-weight: 100;
+  font-weight: 350;
   color: white;
 }
 
@@ -148,7 +148,7 @@ button:active {
 
 .temp p {
   font-size: 9rem;
-  font-weight: 300;
+  font-weight: 350;
   color: white;
 }
 
