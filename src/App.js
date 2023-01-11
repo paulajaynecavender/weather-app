@@ -1,6 +1,6 @@
 import { useCallback, useEffect } from "react";
 import axios from "axios";
-import Weather from "./components/Weather";
+import Weather from "./components/CurrentWeather";
 import ForecastWeather from "./components/ForecastWeather";
 import UserInput from "./components/UserInput";
 import "./App.css";
@@ -14,7 +14,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCompass } from "@fortawesome/free-solid-svg-icons";
 
 const App = () => {
-  // const [weather, setWeather] = useState();
   const dispatch = useDispatch();
 
   const weather = useSelector(selectWeather);
@@ -66,8 +65,7 @@ const App = () => {
       <div className="inputContainer">
         <UserInput />
       </div>
-      {/* {!location && <p>Awaiting location...</p>}
-      <div className="error" id="error"></div> */}
+
       {!weather && ""}
       {weather && (
         <div className="weatherContainer">
