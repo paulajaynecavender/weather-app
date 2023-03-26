@@ -7,7 +7,7 @@ const Highlight = () => {
   return (
     <div className="highlight">
       <div className="temp ">
-        <p className="textShadow">
+        <p className="textShadow text-temp">
           {Math.round(weather.list[0].main.temp - 273.15)}°
         </p>
       </div>

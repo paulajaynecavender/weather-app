@@ -22,7 +22,7 @@ const Sun = () => {
 
   return (
     <>
-      <div className="sun box shadow">
+      <div className="sun box glass">
         <div className="sunrise">
           <img src="./assets/sunrise.svg" alt="sunrise" />
           <p>Sunrise: {sunriseTime}</p>

@@ -4,6 +4,10 @@ html {
   margin: 0;
   padding: 0;
 }
+body {
+  font-family: "Quicksand", sans-serif;
+  margin: 0;
+}
 
 .backgroundImg {
   width: 100%;
@@ -11,6 +15,7 @@ html {
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 h1 {
@@ -36,7 +41,8 @@ h3 {
   text-align: center;
 }
 .textShadow {
-  text-shadow: 1px 2px 0px black;
+  /* text-shadow: 1px 2px 5px black; */
+  text-shadow: 0 0px 10px rgba(0, 0, 0, 0.4);
 }
 p {
   font-size: 1.4rem;
@@ -98,6 +104,7 @@ button:active {
   border: 0;
   padding-left: 10px;
   background-color: white;
+  font-family: inherit;
 }
 .inputBox button {
   position: absolute;
@@ -124,6 +131,8 @@ button:active {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  padding: 2rem;
+  margin: 2rem;
 }
 
 .currentContainer {
@@ -144,6 +153,9 @@ button:active {
   flex-direction: row;
   align-items: center;
   margin-bottom: 15px;
+}
+.temp-text {
+  font-size: 2rem;
 }
 
 .temp p {
@@ -167,9 +179,15 @@ button:active {
   width: 300px;
   padding: 0 10px;
   margin-bottom: 15px;
+
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
 }
-.shadow {
-  box-shadow: 3px 3px 0px black;
+
+.glass {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 16px;
+  backdrop-filter: blur(8.8px);
+  -webkit-backdrop-filter: blur(8.8px);
 }
 
 .detailContent {
@@ -179,12 +197,9 @@ button:active {
   align-items: center;
   padding: 5px;
 }
-.humidity,
-.wind,
-.rain,
-.cloud {
+.detailContent > div {
   display: flex;
-  width: 118px;
+  width: 120px;
   padding: 5px 0px;
 }
 .bold-text {
@@ -217,10 +232,10 @@ button:active {
 .forecastContainer {
   display: flex;
   justify-content: center;
+  min-width: 30rem;
 }
 
 .forecastWeatherContainer {
-  background-color: white;
   display: flex;
   justify-content: space-evenly;
   border-radius: 20px;
@@ -241,7 +256,7 @@ button:active {
   width: 40px;
 }
 .forecastContainerCentre {
-  width: 345px;
+  width: 30rem;
   display: flex;
   overflow: auto;
 }
@@ -258,41 +273,80 @@ button:active {
   border-radius: 100vw;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 768px) {
   .detailContent {
     flex-wrap: nowrap;
   }
   /* .box {
     width: auto;
   } */
-  .box p {
-    font-size: 1.6rem;
+
+  .weatherContainer {
+    max-width: 1000px;
+    margin: 0 auto;
   }
   .currentWeatherContainer {
     align-items: center;
   }
   .sun {
     width: 350px;
+    /* margin: 0 auto; */
   }
   .sun img {
     width: 50px;
   }
+  .sun-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .detail {
-    width: 570px;
+    width: 550px;
   }
   .forecastContainerCentre {
-    width: 578px;
+    width: 630px;
   }
-  .humidity,
-  .wind,
-  .rain,
-  .cloud {
+  .detailContent > div {
     width: auto;
   }
-  .humidity p,
-  .wind p,
-  .rain p,
-  .cloud p {
+  .detailContent > p {
     width: auto;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .detail p,
+  .sun p {
+    font-size: 2rem;
+  }
+  .sun {
+    width: 45rem;
+  }
+  .sun > div {
+    padding: 1rem;
+  }
+  .detail {
+    width: 90rem;
+  }
+  .detailContent {
+    justify-content: space-between;
+  }
+  .detailContent > div > div {
+    display: inline-flex;
+  }
+  .detailContent > div > div p {
+    margin: 0.5rem;
+  }
+  .forecastContainerCentre {
+    width: 90rem;
+  }
+  .forecastWeatherContainer {
+    width: 7rem;
+    height: 15rem;
+  }
+  .forecastWeatherContainer p {
+    font-size: 1.6rem;
+  }
+  .fcDescription img {
+    width: 60px;
   }
 }
