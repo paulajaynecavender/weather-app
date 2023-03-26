@@ -7,6 +7,7 @@ html {
 body {
   font-family: "Quicksand", sans-serif;
   margin: 0;
+  --accent-color: #efcc00;
 }
 
 .backgroundImg {
@@ -66,7 +67,7 @@ p {
   border: 0;
   padding: 5px 10px;
   color: #000;
-  background-color: white;
+  background-color: #fff;
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -76,14 +77,13 @@ p {
 }
 
 button:hover {
-  box-shadow: 3px 3px 0px black;
-  color: black;
-  background-color: hsl(0deg, 0%, 100%);
+  color: #000;
+  /* background-color: var(--accent-color); */
+  background-color: #ffffffaa;
 }
 
 button:active {
-  transform: translateY(30px);
-  transition: all 0.4s ease-in-out;
+  transform: scale(0.9);
 }
 .inputContainer {
   display: flex;
@@ -121,10 +121,10 @@ button:active {
   padding: 8px;
 }
 
-#getLocInput:focus,
-#getLocInput:hover {
+#getLocInput:focus {
   outline: none;
-  box-shadow: 3px 3px 0px black;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+  background-color: #ffffffaa;
 }
 
 .weatherContainer {
@@ -269,7 +269,7 @@ button:active {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #efcc00;
+  background-color: var(--accent-color);
   border-radius: 100vw;
 }
 
